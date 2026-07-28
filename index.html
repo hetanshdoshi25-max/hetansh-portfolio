@@ -744,7 +744,7 @@ function cell(key,it,idx){
 Object.keys(REELS).forEach(key=>{
   const grid=document.querySelector(`[data-reels="${key}"]`),mb=document.querySelector(`[data-more="${key}"]`);
   const items=REELS[key].items;
-  let mode='plate',shown=Math.min(FIRST,items.length);
+  let mode=LOCAL?'plate':'embed',shown=Math.min(FIRST,items.length);
 
   function render(n){
     grid.innerHTML='';
@@ -774,10 +774,10 @@ Object.keys(REELS).forEach(key=>{
     bar.appendChild(n);
   }else{
     const t=document.createElement('button');t.className='prev-tog';
-    t.textContent='Load video previews ↓';
+    t.textContent='Switch to contact sheet ↑';
     t.onclick=()=>{
       mode=mode==='plate'?'embed':'plate';
-      t.textContent=mode==='embed'?'Back to contact sheet ↑':'Load video previews ↓';
+      t.textContent=mode==='embed'?'Switch to contact sheet ↑':'Show video previews ↓';
       render(shown);
     };
     bar.appendChild(t);
