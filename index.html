@@ -281,6 +281,19 @@ body.open #pre{opacity:0;transition:opacity .45s}
 .prev-tog:hover{border-color:var(--acc)}
 .local-note{margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);opacity:.7}
 
+
+/* ---------- education ---------- */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:46px}
+.edu-card{background:var(--surf);padding:30px 26px;display:flex;flex-direction:column;gap:12px;transition:background .4s;position:relative}
+.edu-card:hover{background:var(--surf2)}
+.edu-card i{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--acc);text-transform:uppercase}
+.edu-card h4{font-family:var(--display);font-size:clamp(19px,2.2vw,24px);font-weight:400;line-height:1.22}
+.edu-card p{font-size:13.5px;color:var(--mut);line-height:1.62}
+.edu-card u{text-decoration:none;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:auto;padding-top:10px}
+.score{margin-top:1px;background:var(--surf);border:1px solid var(--ln);border-top:0;padding:26px;display:flex;align-items:center;gap:clamp(16px,3vw,34px);flex-wrap:wrap}
+.score b{font-family:var(--display);font-size:clamp(38px,6vw,66px);font-weight:400;color:var(--acc);line-height:.9;letter-spacing:-.02em}
+.score span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);line-height:1.9}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
 .rv.in{opacity:1;transform:none}
@@ -340,13 +353,14 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <nav>
     <a class="rl" href="#hero"><i>01</i>Index</a>
     <a class="rl" href="#journey"><i>02</i>The Journey</a>
-    <a class="rl" href="#aethon"><i>03</i>Aethon</a>
-    <a class="rl" href="#smm"><i>04</i>SMM</a>
-    <a class="rl" href="#creation"><i>05</i>Creation</a>
-    <a class="rl" href="#collabs"><i>06</i>Collaborations</a>
-    <a class="rl" href="#fitness"><i>07</i>Discipline</a>
-    <a class="rl" href="#press"><i>08</i>Press</a>
-    <a class="rl" href="#contact"><i>09</i>Contact</a>
+    <a class="rl" href="#education"><i>03</i>Education</a>
+    <a class="rl" href="#aethon"><i>04</i>Aethon</a>
+    <a class="rl" href="#smm"><i>05</i>SMM</a>
+    <a class="rl" href="#creation"><i>06</i>Creation</a>
+    <a class="rl" href="#collabs"><i>07</i>Collaborations</a>
+    <a class="rl" href="#fitness"><i>08</i>Discipline</a>
+    <a class="rl" href="#press"><i>09</i>Press</a>
+    <a class="rl" href="#contact"><i>10</i>Contact</a>
   </nav>
   <div class="rail-foot">
     <a href="https://www.instagram.com/hetansh_doshi28" target="_blank" rel="noopener">Instagram ↗</a>
@@ -357,7 +371,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <div id="topbar">
   <b>HD</b>
-  <a href="#journey">Journey</a><a href="#aethon">Aethon</a><a href="#smm">SMM</a>
+  <a href="#journey">Journey</a><a href="#education">Education</a><a href="#aethon">Aethon</a><a href="#smm">SMM</a>
   <a href="#creation">Creation</a><a href="#collabs">Collabs</a><a href="#fitness">Discipline</a>
   <a href="#press">Press</a><a href="#contact">Contact</a>
 </div>
@@ -433,11 +447,45 @@ body.open #pre{opacity:0;transition:opacity .45s}
   </div>
 </section>
 
+<!-- EDUCATION -->
+<section id="education" class="band on-ink deep">
+  <div class="marker">03 / Education</div>
+  <div class="wrap">
+    <div class="eyebrow rv"><em>03 — Education</em><s></s></div>
+    <h2 class="sec">School, science, <b>and engineering</b></h2>
+    <p class="lede rv">A fairly linear academic path running quietly underneath everything else I've been building.</p>
+    <div class="edu rv">
+      <div class="edu-card">
+        <i>Schooling</i>
+        <h4>Fatima High School</h4>
+        <p>Completed schooling up to Grade 10.</p>
+        <u>Mumbai, India</u>
+      </div>
+      <div class="edu-card">
+        <i>Grades 11 &amp; 12</i>
+        <h4>Science Stream</h4>
+        <p>Took science and spent those two years preparing for JEE alongside boards.</p>
+        <u>Mumbai, India</u>
+      </div>
+      <div class="edu-card">
+        <i>Currently pursuing</i>
+        <h4>B.E. Computer Engineering</h4>
+        <p>Shah and Anchor Kutchhi Engineering College, where I'm studying now while building on the side.</p>
+        <u>Mumbai, India</u>
+      </div>
+    </div>
+    <div class="score rv">
+      <b>96</b>
+      <span>Percentile · JEE Main<br>Joint Entrance Examination</span>
+    </div>
+  </div>
+</section>
+
 <!-- AETHON -->
 <section id="aethon" class="band on-ink deep">
-  <div class="marker">03 / Aethon</div>
+  <div class="marker">04 / Aethon</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>03 — The Startup</em><s></s></div>
+    <div class="eyebrow rv"><em>04 — The Startup</em><s></s></div>
     <h2 class="sec">Aethon</h2>
     <p class="lede rv">Founder &amp; Developer. An AI assistant built to talk, see, and act, not just chat back.</p>
     <div class="two">
@@ -492,9 +540,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- SMM -->
 <section id="smm" class="band on-paper">
-  <div class="marker">04 / Social Media Manager</div>
+  <div class="marker">05 / Social Media Manager</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>04 — Social Media Manager</em><s></s></div>
+    <div class="eyebrow rv"><em>05 — Social Media Manager</em><s></s></div>
     <h2 class="sec">Ten plus accounts, <b>run from the back</b></h2>
     <p class="lede rv">Through WALNUTS Media, I've managed 10+ brand and personal accounts across sports, fashion, luxury and entertainment, with a few individual clients handled through freelancing, outside the agency. Most work sits under confidentiality, so the roster below is described by category rather than by name.</p>
     <div class="roster">
@@ -518,9 +566,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- CREATION -->
 <section id="creation" class="band on-paper alt">
-  <div class="marker">05 / Content Creation</div>
+  <div class="marker">06 / Content Creation</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>05 — Content Creation</em><s></s></div>
+    <div class="eyebrow rv"><em>06 — Content Creation</em><s></s></div>
     <h2 class="sec">In front of the camera <b>too</b></h2>
     <p class="lede rv">Shot, directed, edited and published. A selection from my own feed, separate from client work.</p>
     <div class="sheet-note rv"><s></s>Contact sheet — 12 reels</div>
@@ -531,9 +579,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- COLLABS -->
 <section id="collabs" class="band on-paper">
-  <div class="marker">06 / Collaborations</div>
+  <div class="marker">07 / Collaborations</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>06 — Collaborations</em><s></s></div>
+    <div class="eyebrow rv"><em>07 — Collaborations</em><s></s></div>
     <h2 class="sec">Brand <b>collaborations</b></h2>
     <p class="lede rv">Paid and partnered work created with brands.</p>
     <div class="sheet-note rv"><s></s>Contact sheet — 5 reels</div>
@@ -544,9 +592,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- FITNESS -->
 <section id="fitness" class="band on-paper alt">
-  <div class="marker">07 / Discipline</div>
+  <div class="marker">08 / Discipline</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>07 — Discipline</em><s></s></div>
+    <div class="eyebrow rv"><em>08 — Discipline</em><s></s></div>
     <h2 class="sec">Train the body, <b>the rest follows</b></h2>
     <p class="lede rv">Fitness isn't a hobby I fit around everything else. Discipline in the gym translates directly into how I show up for work, for clients, and for the things I'm building.</p>
     <div class="sheet-note rv"><s></s>Contact sheet — 13 posts</div>
@@ -557,9 +605,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- PRESS -->
 <section id="press" class="band on-paper">
-  <div class="marker">08 / Press</div>
+  <div class="marker">09 / Press</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>08 — Press &amp; Recognition</em><s></s></div>
+    <div class="eyebrow rv"><em>09 — Press &amp; Recognition</em><s></s></div>
     <h2 class="sec">Featured in <b>print</b></h2>
     <p class="lede rv">Three magazine features to date, and coverage across a dozen digital publications.</p>
     <div class="mags rv">
@@ -595,9 +643,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- CONTACT -->
 <section id="contact" class="band on-ink deep">
-  <div class="marker">09 / Contact</div>
+  <div class="marker">10 / Contact</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>09 — Contact</em><s></s></div>
+    <div class="eyebrow rv"><em>10 — Contact</em><s></s></div>
     <h2 class="sec">Let's build <b>something</b></h2>
     <p class="lede rv">Open to work, collaborations, and conversations about anything being built from scratch.</p>
     <div class="c-grid">
