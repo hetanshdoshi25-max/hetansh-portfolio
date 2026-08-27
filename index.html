@@ -131,7 +131,6 @@ h1 .ch.in{opacity:1;transform:none;filter:none}
 .mode:hover{background:var(--surf2)}
 .mode.lead{grid-column:span 2;background:linear-gradient(150deg,#1A1F2C,#0C0E12)}
 .mode h5{font-family:var(--body);font-weight:600;font-size:14.5px;margin-bottom:11px;display:flex;align-items:center;gap:9px}
-.mode h5 u{text-decoration:none;font-size:15px}
 .mode h5 em{font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--klein-hi);margin-left:4px}
 .mode ul{list-style:none}
 .mode li{font-size:13.5px;color:var(--mut);padding-left:15px;position:relative;margin-bottom:7px;line-height:1.6}
@@ -326,6 +325,18 @@ body.open #pre{opacity:0;transition:opacity .45s}
   .gal figure,.gal figure:nth-child(2),.gal figure:nth-child(3){grid-column:span 1}
   .gal figure:first-child{grid-column:span 2;grid-row:auto}
 }
+
+
+/* ---------- brand roster ---------- */
+.brands{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px clamp(12px,1.8vw,26px);margin-top:34px;padding-bottom:34px;border-bottom:1px solid var(--ln)}
+.brand{font-family:var(--display);font-weight:400;font-size:clamp(21px,3.6vw,44px);line-height:1.22;letter-spacing:-.02em;color:var(--fg);opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1),color .35s;position:relative;display:inline-block;white-space:nowrap}
+.brand.in{opacity:1;transform:none}
+.brand::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.brand:hover{color:var(--acc)}
+.brand:hover::after{transform:scaleX(1)}
+.bsep{font-family:var(--mono);font-size:8px;color:var(--acc);opacity:.55;transform:translateY(-.5em);display:inline-block}
+.brand-count{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-top:14px;display:flex;align-items:center;gap:13px}
+.brand-count s{text-decoration:none;flex:1;height:1px;background:var(--ln);max-width:150px}
 
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
@@ -534,29 +545,49 @@ body.open #pre{opacity:0;transition:opacity .45s}
     <div class="stat-strip rv">
       <div class="stat"><b>01</b><span>Founder &amp; developer</span></div>
       <div class="stat"><b>02</b><span>Languages · Python, JS</span></div>
-      <div class="stat"><b>09</b><span>Operating modes</span></div>
+      <div class="stat"><b>13</b><span>Operating modes</span></div>
       <div class="stat"><b>∞</b><span>Rebuilds, and counting</span></div>
     </div>
-    <div class="mode-head rv"><h3>What it does</h3><em>Nine modes, one assistant</em></div>
+    <div class="mode-head rv"><h3>What it does</h3><em>Thirteen modes, one assistant</em></div>
     <div class="modes rv">
       <div class="mode lead">
-        <h5><u>🎙</u> Voice + Vision <em>Default</em></h5>
+        <h5>Voice + Vision <em>Default</em></h5>
         <ul>
           <li>Natural voice conversation, Zyra replies in her own voice</li>
-          <li>Camera vision, ambient and proactive, sees before being asked</li>
+          <li>Camera vision, ambient and proactive, seeing before being asked</li>
           <li>PC control: open apps, volume, brightness, media, screen lock, screenshots</li>
-          <li>Screen Vision: say the word, it reads your screen and explains it</li>
-          <li>Watch Me Work: passive screen tips, off by default</li>
+          <li>Screen Vision reads your screen and explains it on command</li>
+          <li>Watch Me Work gives passive screen tips, off by default</li>
         </ul>
       </div>
-      <div class="mode"><h5><u>🎙</u> Meeting Mode</h5><p>Record, transcribe, then hand back a summary with action items.</p></div>
-      <div class="mode"><h5><u>📋</u> Task Manager</h5><p>Add and complete tasks, by voice or by hand.</p></div>
-      <div class="mode"><h5><u>✍️</u> Writer</h5><p>Drafts emails, messages and posts in your voice.</p></div>
-      <div class="mode"><h5><u>🤖</u> Ask</h5><p>AI chat with images, file support, and memory that carries over.</p></div>
-      <div class="mode"><h5><u>📚</u> Ask My Docs</h5><p>Upload a PDF or text file and question it directly.</p></div>
-      <div class="mode"><h5><u>🎧</u> Co-pilot</h5><p>Live meeting support with quick-ask and auto-listen.</p></div>
-      <div class="mode"><h5><u>🎯</u> Focus Coach</h5><p>Pomodoro sessions with a camera-based mood check.</p></div>
-      <div class="mode"><h5><u>💼</u> Sales Co-pilot</h5><p>Live objection radar during calls, plus an automatic wrap-up.</p></div>
+      <div class="mode"><h5>Meeting Mode</h5><p>Records, transcribes, then hands back a summary with action items.</p></div>
+      <div class="mode"><h5>Task Manager</h5><p>Add and complete tasks, by voice or by hand.</p></div>
+      <div class="mode"><h5>Writer</h5><p>Drafts emails, messages and posts in your own voice and style.</p></div>
+      <div class="mode"><h5>Ask</h5><p>AI chat with image and file support, plus memory that carries over across conversations.</p></div>
+      <div class="mode"><h5>Ask My Docs</h5><p>Upload a PDF or text file and question it directly.</p></div>
+      <div class="mode"><h5>Co-pilot</h5><p>Live meeting support with quick-ask and auto-listen.</p></div>
+      <div class="mode"><h5>Focus Coach</h5><p>Pomodoro sessions with a camera-based mood check.</p></div>
+      <div class="mode"><h5>Sales Co-pilot</h5><p>Live objection radar during calls, plus an automatic wrap-up.</p></div>
+      <div class="mode lead">
+        <h5>Hand Gesture Control <em>Touchless</em></h5>
+        <ul>
+          <li>Full PC control with your hands, no mouse or keyboard</li>
+          <li>Point to move the cursor, pinch to click</li>
+          <li>Fist to scroll down, peace sign to scroll up</li>
+          <li>Runs in the background, so it controls any app even with Aethon minimised</li>
+        </ul>
+      </div>
+      <div class="mode lead">
+        <h5>Phone Control <em>via Telegram</em></h5>
+        <ul>
+          <li>Control your PC from anywhere by sending commands on Telegram</li>
+          <li>Take screenshots, open apps, search YouTube or Google, open any site</li>
+          <li>Send WhatsApp messages by saved contact name</li>
+          <li>Compose and send email, and manage contacts</li>
+        </ul>
+      </div>
+      <div class="mode"><h5>Media Feed</h5><p>Live news headlines and trending videos in a full-screen dashboard. Triggered by voice or button, videos play in-app with no browser redirect.</p></div>
+      <div class="mode"><h5>File Generation</h5><p>Generates presentations and Word documents from a spoken topic. Files auto-save to the desktop and open automatically.</p></div>
     </div>
     <p class="privacy rv">All vision and screen data is processed with user consent and privacy-first design principles.</p>
     <div class="cta-row rv">
@@ -577,22 +608,24 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>05 — Social Media Manager</em><s></s></div>
     <h2 class="sec">Ten plus accounts, <b>run from the back</b></h2>
-    <p class="lede rv">Through WALNUTS Media, I've managed 10+ brand and personal accounts across sports, fashion, luxury and entertainment, with a few individual clients handled through freelancing, outside the agency. Most work sits under confidentiality, so the roster below is described by category rather than by name.</p>
+    <p class="lede rv">Through WALNUTS Media, I've managed 10+ brand and personal accounts across sports, fashion, luxury and entertainment, with a few individual clients handled through freelancing, outside the agency.</p>
     <div class="roster">
-      <div class="roster-h rv"><em>Via WALNUTS Media</em><s></s><b>09 Accounts</b></div>
-      <div class="cl rv"><i>01</i><h4>A former IPL player's personal account</h4><span>Sports · Personal brand</span></div>
-      <div class="cl rv"><i>02</i><h4>A prominent cricket academy <u>with ties to a top Indian cricketer's circle</u></h4><span>Sports · Strategy</span></div>
-      <div class="cl rv"><i>03</i><h4>Two to three additional cricket academy accounts</h4><span>Sports · Content</span></div>
-      <div class="cl rv"><i>04</i><h4>A well-known chocolate brand</h4><span>F&amp;B · Brand</span></div>
-      <div class="cl rv"><i>05</i><h4>A film director's page</h4><span>Entertainment</span></div>
-      <div class="cl rv"><i>06</i><h4>A large sports turf arena <u>in Powai, Mumbai</u></h4><span>Sports · Local</span></div>
-      <div class="cl rv"><i>07</i><h4>A leading fashion &amp; ad film house <u>celebrity shoots &amp; ad films</u></h4><span>Fashion · Production</span></div>
-      <div class="cl rv"><i>08</i><h4>A premium wedding films brand <u>content &amp; full event coverage</u></h4><span>Weddings · Content</span></div>
-      <div class="cl rv"><i>09</i><h4>Directed a podcast <u>for a chief member of the Mumbai Cricket Association</u></h4><span>Direction</span></div>
+      <div class="roster-h rv"><em>Via WALNUTS Media</em><s></s><b>11 Accounts</b></div>
+      <div class="cl rv"><i>01</i><h4>Suryakumar Yadav <u>Indian cricketer, shoot for Jito Premier League as Brand Ambassador</u></h4><span>Sports · Campaign</span></div>
+      <div class="cl rv"><i>02</i><h4>Dinesh Salunkhe Cricket Academy <u>academy of the former IPL player</u></h4><span>Sports · Academy</span></div>
+      <div class="cl rv"><i>03</i><h4>Teamwork Cricket Academy <u>with ties to a top Indian cricketer's circle</u></h4><span>Sports · Strategy</span></div>
+      <div class="cl rv"><i>04</i><h4>Two to three additional cricket academy accounts</h4><span>Sports · Content</span></div>
+      <div class="cl rv"><i>05</i><h4>Marv Chocolates</h4><span>F&amp;B · Brand</span></div>
+      <div class="cl rv"><i>06</i><h4>Bandra Gurukripa <u>the Mumbai institution known for its A1 samosa and pani puri</u></h4><span>F&amp;B · Brand</span></div>
+      <div class="cl rv"><i>07</i><h4>Manoj Khatri <u>film director</u></h4><span>Entertainment</span></div>
+      <div class="cl rv"><i>08</i><h4>Off The Mark <u>sports turf arena, Powai, Mumbai</u></h4><span>Sports · Venue</span></div>
+      <div class="cl rv"><i>09</i><h4>Ram Bherwani Fashion <u>celebrity shoots &amp; ad films</u></h4><span>Fashion · Production</span></div>
+      <div class="cl rv"><i>10</i><h4>Ram Bherwani Weddings <u>content &amp; full event coverage</u></h4><span>Weddings · Content</span></div>
+      <div class="cl rv"><i>11</i><h4>Nilesh Bhosale <u>directed a podcast for the Mumbai Cricket Association chief member</u></h4><span>Direction</span></div>
       <div class="roster-h rv"><em>Handled Individually · Freelance</em><s></s><b>03 Accounts</b></div>
-      <div class="cl rv"><i>10</i><h4>A Dubai-based jewellery brand</h4><span>Luxury · International</span></div>
-      <div class="cl rv"><i>11</i><h4>A New Zealand-based men's accessories brand</h4><span>Retail · International</span></div>
-      <div class="cl rv"><i>12</i><h4>A Pune-based forex trading academy</h4><span>Finance · Education</span></div>
+      <div class="cl rv"><i>12</i><h4>A Dubai-based jewellery brand</h4><span>Luxury · International</span></div>
+      <div class="cl rv"><i>13</i><h4>A New Zealand-based men's accessories brand</h4><span>Retail · International</span></div>
+      <div class="cl rv"><i>14</i><h4>A Pune-based forex trading academy</h4><span>Finance · Education</span></div>
     </div>
   </div>
 </section>
@@ -604,7 +637,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
     <div class="eyebrow rv"><em>06 — Content Creation</em><s></s></div>
     <h2 class="sec">In front of the camera <b>too</b></h2>
     <p class="lede rv">Shot, directed, edited and published. A selection from my own feed, separate from client work.</p>
-    <div class="sheet-note rv"><s></s>Contact sheet — 14 reels</div>
+    <div class="sheet-note rv"><s></s>Contact sheet — 16 reels</div>
     <div class="sheet" data-reels="creation"></div>
     <div class="more" data-more="creation"></div>
   </div>
@@ -616,7 +649,27 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>07 — Collaborations</em><s></s></div>
     <h2 class="sec">Brand <b>collaborations</b></h2>
-    <p class="lede rv">Paid and partnered work created with brands.</p>
+    <p class="lede rv">Paid and partnered work created with brands across aviation, tech, grooming and fragrance.</p>
+    <div class="brands">
+      <span class="brand">Air India</span>
+      <span class="bsep">◆</span>
+      <span class="brand">OnePlus</span>
+      <span class="bsep">◆</span>
+      <span class="brand">The Man Company</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Fikn</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Mannlich</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Tomhill Luxury</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Mancode</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Hira Perfumes</span>
+      <span class="bsep">◆</span>
+      <span class="brand">La French Perfume</span>
+    </div>
+    <div class="brand-count rv"><span>Nine brands to date</span><s></s></div>
     <div class="sheet-note rv"><s></s>Contact sheet — 6 reels</div>
     <div class="sheet" data-reels="collabs"></div>
     <div class="more" data-more="collabs"></div>
@@ -630,7 +683,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
     <div class="eyebrow rv"><em>08 — Discipline</em><s></s></div>
     <h2 class="sec">Train the body, <b>the rest follows</b></h2>
     <p class="lede rv">Fitness isn't a hobby I fit around everything else. Discipline in the gym translates directly into how I show up for work, for clients, and for the things I'm building.</p>
-    <div class="sheet-note rv"><s></s>Contact sheet — 13 posts</div>
+    <div class="sheet-note rv"><s></s>Contact sheet — 14 posts</div>
     <div class="sheet" data-reels="fitness"></div>
     <div class="more" data-more="fitness"></div>
   </div>
@@ -782,6 +835,7 @@ function heroIn(){
 /* ---- reveal + heading masks ---- */
 const rv=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'-50px'});
 document.querySelectorAll('.rv').forEach(el=>{if(!el.closest('#hero'))rv.observe(el)});
+document.querySelectorAll('.brand').forEach((el,i)=>{el.style.transitionDelay=(i*70)+'ms';rv.observe(el)});
 document.querySelectorAll('h2.sec').forEach(h=>{h.innerHTML='<span class="msk">'+h.innerHTML+'</span>';rv.observe(h)});
 
 /* ---- text scramble ---- */
@@ -819,9 +873,9 @@ addEventListener('scroll',()=>{sv.style.transform=`rotate(${scrollY*.03}deg)`},{
 /* ---- contact sheets ---- */
 const REELS={
  aethon:{lab:'Aethon',items:[['reel','DYZur-JNTkh'],['reel','DbU1tNWM3JY'],['reel','DbQZTIjszp6'],['reel','DZe-9PPsH32'],['reel','DZcCqSUssWR'],['reel','DZGTK0xTHcl'],['reel','DYrxMqbMydc']]},
- creation:{lab:'Creation',items:[['reel','Db0ahD8uU1u'],['reel','DbqxWmiuxCj'],['reel','DaxqnvWtx-G'],['reel','DZc9NmnN-t-'],['reel','DZw60kGOLn9'],['reel','DaJB1EBOKXd'],['reel','DaS_6M-tzLC'],['reel','Dakk2_6unPu'],['reel','Dac4TJquNUJ'],['reel','DaLNrgetsm3'],['reel','DZVioVjuWo5'],['reel','DUQpyyOjQ_J'],['reel','DSgDAucjpiF'],['reel','Da5M3S8z0KE']]},
+ creation:{lab:'Creation',items:[['reel','DcjR0lquNXP'],['reel','DcQpqBfudRP'],['reel','Db0ahD8uU1u'],['reel','DbqxWmiuxCj'],['reel','DaxqnvWtx-G'],['reel','DZc9NmnN-t-'],['reel','DZw60kGOLn9'],['reel','DaJB1EBOKXd'],['reel','DaS_6M-tzLC'],['reel','Dakk2_6unPu'],['reel','Dac4TJquNUJ'],['reel','DaLNrgetsm3'],['reel','DZVioVjuWo5'],['reel','DUQpyyOjQ_J'],['reel','DSgDAucjpiF'],['reel','Da5M3S8z0KE']]},
  collabs:{lab:'Collab',items:[['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
- fitness:{lab:'Training',items:[['p','Danu9poDpvU'],['p','DTyQaN_DoF9'],['p','DTPhL_UjVW4'],['p','DTBZXKxDRHH'],['p','DOdtBlajAsf'],['reel','DZFLrDsOkWW'],['reel','DWi0-OpNeQz'],['reel','DWJKGqONXvb'],['reel','DULtOQRjciL'],['reel','DRCuOyBjCJ2'],['reel','DMxvLGjtb_J'],['reel','DLaTnm5thZ_'],['reel','DL7qXrftbZU']]}
+ fitness:{lab:'Training',items:[['reel','DcYqKhZuVyK'],['p','Danu9poDpvU'],['p','DTyQaN_DoF9'],['p','DTPhL_UjVW4'],['p','DTBZXKxDRHH'],['p','DOdtBlajAsf'],['reel','DZFLrDsOkWW'],['reel','DWi0-OpNeQz'],['reel','DWJKGqONXvb'],['reel','DULtOQRjciL'],['reel','DRCuOyBjCJ2'],['reel','DMxvLGjtb_J'],['reel','DLaTnm5thZ_'],['reel','DL7qXrftbZU']]}
 };
 const FIRST=6;
 let CUR={key:null,i:0};
