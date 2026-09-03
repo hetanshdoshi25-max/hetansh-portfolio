@@ -338,6 +338,29 @@ body.open #pre{opacity:0;transition:opacity .45s}
 .brand-count{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-top:14px;display:flex;align-items:center;gap:13px}
 .brand-count s{text-decoration:none;flex:1;height:1px;background:var(--ln);max-width:150px}
 
+
+/* ---------- projects ---------- */
+.projs{margin-top:46px;border-top:1px solid var(--ln)}
+.proj{display:grid;grid-template-columns:58px 1fr;gap:clamp(16px,3vw,38px);padding:32px 0;border-bottom:1px solid var(--ln);position:relative;overflow:hidden;transition:padding .4s}
+.proj::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.proj:hover{padding-left:10px}
+.proj:hover::after{transform:scaleX(1)}
+.proj-n{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--mut);line-height:1;padding-top:4px;transition:color .35s}
+.proj:hover .proj-n{color:var(--acc)}
+.proj-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.proj-h h4{font-family:var(--display);font-size:clamp(21px,2.6vw,29px);font-weight:400;letter-spacing:-.012em}
+.proj-h em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.proj p{color:var(--mut);font-size:15px;line-height:1.78;max-width:60ch;margin-bottom:14px}
+.ptags{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.ptag{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border:1px solid var(--ln);padding:6px 11px}
+.plink{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);text-decoration:none;margin-left:4px}
+.plink:hover{text-decoration:underline}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:26px}
+.skill{background:var(--surf);padding:26px 24px}
+.skill i{font-style:normal;display:block;font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+.skill ul{list-style:none}
+.skill li{font-size:14px;color:var(--mut);padding:5px 0;line-height:1.5}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
 .rv.in{opacity:1;transform:none}
@@ -399,12 +422,11 @@ body.open #pre{opacity:0;transition:opacity .45s}
     <a class="rl" href="#journey"><i>02</i>The Journey</a>
     <a class="rl" href="#education"><i>03</i>Education</a>
     <a class="rl" href="#aethon"><i>04</i>Aethon</a>
-    <a class="rl" href="#smm"><i>05</i>SMM</a>
-    <a class="rl" href="#creation"><i>06</i>Creation</a>
+    <a class="rl" href="#projects"><i>05</i>Projects</a>
+    <a class="rl" href="#smm"><i>06</i>SMM</a>
     <a class="rl" href="#collabs"><i>07</i>Collaborations</a>
-    <a class="rl" href="#fitness"><i>08</i>Discipline</a>
-    <a class="rl" href="#press"><i>09</i>Press</a>
-    <a class="rl" href="#contact"><i>10</i>Contact</a>
+    <a class="rl" href="#press"><i>08</i>Press</a>
+    <a class="rl" href="#contact"><i>09</i>Contact</a>
   </nav>
   <div class="rail-foot">
     <a href="https://www.instagram.com/hetansh_doshi28" target="_blank" rel="noopener">Instagram ↗</a>
@@ -415,8 +437,8 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <div id="topbar">
   <b>HD</b>
-  <a href="#journey">Journey</a><a href="#education">Education</a><a href="#aethon">Aethon</a><a href="#smm">SMM</a>
-  <a href="#creation">Creation</a><a href="#collabs">Collabs</a><a href="#fitness">Discipline</a>
+  <a href="#journey">Journey</a><a href="#education">Education</a><a href="#aethon">Aethon</a><a href="#projects">Projects</a><a href="#smm">SMM</a>
+  <a href="#collabs">Collabs</a>
   <a href="#press">Press</a><a href="#contact">Contact</a>
 </div>
 
@@ -600,13 +622,75 @@ body.open #pre{opacity:0;transition:opacity .45s}
   </div>
 </section>
 
-<div class="cut"><b>The work</b><em>Four disciplines · One operator</em></div>
+<!-- PROJECTS -->
+<section id="projects" class="band on-ink">
+  <div class="marker">05 / Projects</div>
+  <div class="wrap">
+    <div class="eyebrow rv"><em>05 — Projects</em><s></s></div>
+    <h2 class="sec">Things I've built <b>outside Aethon</b></h2>
+    <p class="lede rv">A mix of tools, systems and experiments built across different languages. All of them are public on GitHub.</p>
+    <div class="projs">
+      <div class="proj rv">
+        <div class="proj-n">01</div>
+        <div>
+          <div class="proj-h"><h4>secpatch</h4><em>JavaScript · MIT</em></div>
+          <p>A passive security auditor for web apps that got shipped fast. A lot of products go live without anyone reviewing them for exposed secrets or weak configuration, so secpatch scans a project and reports what actually needs fixing. Built as a zero-dependency Node CLI, so it doesn't drag in a supply chain of its own just to check yours.</p>
+          <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">CLI</span><span class="ptag">DevSecOps</span><span class="ptag">Secrets detection</span><a class="plink" href="https://github.com/hetanshdoshi25-max/secpatch" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">02</div>
+        <div>
+          <div class="proj-h"><h4>india-dev-apis</h4><em>Python · MIT</em></div>
+          <p>A set of open APIs giving developers clean access to Indian postal, banking and government data. The hard part isn't the endpoints, it's keeping them honest, so every endpoint is machine-checked daily and the results are public.</p>
+          <div class="ptags"><span class="ptag">REST APIs</span><span class="ptag">Automated testing</span><span class="ptag">Open data</span><a class="plink" href="https://github.com/hetanshdoshi25-max/india-dev-apis" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">03</div>
+        <div>
+          <div class="proj-h"><h4>resume-analyzer</h4><em>Java</em></div>
+          <p>A Java application that reads resumes and pulls them apart into structured, comparable information, cutting down the manual work in first-round screening.</p>
+          <div class="ptags"><span class="ptag">Java</span><span class="ptag">Text parsing</span><a class="plink" href="https://github.com/hetanshdoshi25-max/resume-analyzer" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">04</div>
+        <div>
+          <div class="proj-h"><h4>Smart Traffic Signal Management</h4><em>C</em></div>
+          <p>A traffic signal control system written in C, modelling how signal timing can adapt to changing traffic conditions instead of running on fixed intervals.</p>
+          <div class="ptags"><span class="ptag">C</span><span class="ptag">Systems logic</span><a class="plink" href="https://github.com/hetanshdoshi25-max/Smart-Traffic-Signal-Management-System-" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">05</div>
+        <div>
+          <div class="proj-h"><h4>GitHub profile README</h4><em>Python</em></div>
+          <p>An animated GitHub profile built out of hand-generated SVG plates rather than third-party widgets, so nothing depends on an external service staying online.</p>
+          <div class="ptags"><span class="ptag">SVG</span><span class="ptag">Automation</span><a class="plink" href="https://github.com/hetanshdoshi25-max/hetanshdoshi25-max" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="mode-head rv"><h3>What these add up to</h3><em>Skills across the stack</em></div>
+    <div class="skills rv">
+      <div class="skill"><i>Languages</i><ul><li>Python</li><li>JavaScript</li><li>Java</li><li>C</li><li>HTML &amp; CSS</li></ul></div>
+      <div class="skill"><i>AI &amp; automation</i><ul><li>LLM integration</li><li>Voice interfaces</li><li>Computer vision</li><li>Desktop automation</li></ul></div>
+      <div class="skill"><i>Backend</i><ul><li>FastAPI &amp; REST design</li><li>Node.js CLI tooling</li><li>Firebase &amp; Supabase</li><li>Automated testing</li></ul></div>
+      <div class="skill"><i>Product</i><ul><li>Frontend &amp; motion design</li><li>Deployment &amp; DNS</li><li>Security hardening</li><li>Shipping solo</li></ul></div>
+    </div>
+    <div class="cta-row rv">
+      <a class="btn" href="https://github.com/hetanshdoshi25-max" target="_blank" rel="noopener"><span>All repositories ↗</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="cut"><b>The work</b><em>Clients, collaborations and coverage</em></div>
 
 <!-- SMM -->
 <section id="smm" class="band on-paper">
-  <div class="marker">05 / Social Media Manager</div>
+  <div class="marker">06 / Social Media Manager</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>05 — Social Media Manager</em><s></s></div>
+    <div class="eyebrow rv"><em>06 — Social Media Manager</em><s></s></div>
     <h2 class="sec">Ten plus accounts, <b>run from the back</b></h2>
     <p class="lede rv">Through WALNUTS Media, I've managed 10+ brand and personal accounts across sports, fashion, luxury and entertainment, with a few individual clients handled through freelancing, outside the agency.</p>
     <div class="roster">
@@ -630,21 +714,8 @@ body.open #pre{opacity:0;transition:opacity .45s}
   </div>
 </section>
 
-<!-- CREATION -->
-<section id="creation" class="band on-paper alt">
-  <div class="marker">06 / Content Creation</div>
-  <div class="wrap">
-    <div class="eyebrow rv"><em>06 — Content Creation</em><s></s></div>
-    <h2 class="sec">In front of the camera <b>too</b></h2>
-    <p class="lede rv">Shot, directed, edited and published. A selection from my own feed, separate from client work.</p>
-    <div class="sheet-note rv"><s></s>Contact sheet — 16 reels</div>
-    <div class="sheet" data-reels="creation"></div>
-    <div class="more" data-more="creation"></div>
-  </div>
-</section>
-
 <!-- COLLABS -->
-<section id="collabs" class="band on-paper">
+<section id="collabs" class="band on-paper alt">
   <div class="marker">07 / Collaborations</div>
   <div class="wrap">
     <div class="eyebrow rv"><em>07 — Collaborations</em><s></s></div>
@@ -670,30 +741,17 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <span class="brand">La French Perfume</span>
     </div>
     <div class="brand-count rv"><span>Nine brands to date</span><s></s></div>
-    <div class="sheet-note rv"><s></s>Contact sheet — 6 reels</div>
+    <div class="sheet-note rv"><s></s>Contact sheet — 7 reels</div>
     <div class="sheet" data-reels="collabs"></div>
     <div class="more" data-more="collabs"></div>
   </div>
 </section>
 
-<!-- FITNESS -->
-<section id="fitness" class="band on-paper alt">
-  <div class="marker">08 / Discipline</div>
-  <div class="wrap">
-    <div class="eyebrow rv"><em>08 — Discipline</em><s></s></div>
-    <h2 class="sec">Train the body, <b>the rest follows</b></h2>
-    <p class="lede rv">Fitness isn't a hobby I fit around everything else. Discipline in the gym translates directly into how I show up for work, for clients, and for the things I'm building.</p>
-    <div class="sheet-note rv"><s></s>Contact sheet — 14 posts</div>
-    <div class="sheet" data-reels="fitness"></div>
-    <div class="more" data-more="fitness"></div>
-  </div>
-</section>
-
 <!-- PRESS -->
 <section id="press" class="band on-paper">
-  <div class="marker">09 / Press</div>
+  <div class="marker">08 / Press</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>09 — Press &amp; Recognition</em><s></s></div>
+    <div class="eyebrow rv"><em>08 — Press &amp; Recognition</em><s></s></div>
     <h2 class="sec">Featured in <b>print</b></h2>
     <p class="lede rv">Named among the Iconic Personalities of the Year 2026, with three magazine features and coverage across national media.</p>
     <div class="spot rv">
@@ -770,9 +828,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 
 <!-- CONTACT -->
 <section id="contact" class="band on-ink deep">
-  <div class="marker">10 / Contact</div>
+  <div class="marker">09 / Contact</div>
   <div class="wrap">
-    <div class="eyebrow rv"><em>10 — Contact</em><s></s></div>
+    <div class="eyebrow rv"><em>09 — Contact</em><s></s></div>
     <h2 class="sec">Let's build <b>something</b></h2>
     <p class="lede rv">Open to work, collaborations, and conversations about anything being built from scratch.</p>
     <div class="c-grid">
@@ -873,9 +931,7 @@ addEventListener('scroll',()=>{sv.style.transform=`rotate(${scrollY*.03}deg)`},{
 /* ---- contact sheets ---- */
 const REELS={
  aethon:{lab:'Aethon',items:[['reel','DYZur-JNTkh'],['reel','DbU1tNWM3JY'],['reel','DbQZTIjszp6'],['reel','DZe-9PPsH32'],['reel','DZcCqSUssWR'],['reel','DZGTK0xTHcl'],['reel','DYrxMqbMydc']]},
- creation:{lab:'Creation',items:[['reel','DcjR0lquNXP'],['reel','DcQpqBfudRP'],['reel','Db0ahD8uU1u'],['reel','DbqxWmiuxCj'],['reel','DaxqnvWtx-G'],['reel','DZc9NmnN-t-'],['reel','DZw60kGOLn9'],['reel','DaJB1EBOKXd'],['reel','DaS_6M-tzLC'],['reel','Dakk2_6unPu'],['reel','Dac4TJquNUJ'],['reel','DaLNrgetsm3'],['reel','DZVioVjuWo5'],['reel','DUQpyyOjQ_J'],['reel','DSgDAucjpiF'],['reel','Da5M3S8z0KE']]},
- collabs:{lab:'Collab',items:[['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
- fitness:{lab:'Training',items:[['reel','DcYqKhZuVyK'],['p','Danu9poDpvU'],['p','DTyQaN_DoF9'],['p','DTPhL_UjVW4'],['p','DTBZXKxDRHH'],['p','DOdtBlajAsf'],['reel','DZFLrDsOkWW'],['reel','DWi0-OpNeQz'],['reel','DWJKGqONXvb'],['reel','DULtOQRjciL'],['reel','DRCuOyBjCJ2'],['reel','DMxvLGjtb_J'],['reel','DLaTnm5thZ_'],['reel','DL7qXrftbZU']]}
+ collabs:{lab:'Collab',items:[['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
 };
 const FIRST=6;
 let CUR={key:null,i:0};
