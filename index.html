@@ -353,6 +353,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
 .proj p{color:var(--mut);font-size:15px;line-height:1.78;max-width:60ch;margin-bottom:14px}
 .ptags{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
 .ptag{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border:1px solid var(--ln);padding:6px 11px}
+.pstat{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--acc);padding:5px 10px;white-space:nowrap}
 .plink{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);text-decoration:none;margin-left:4px}
 .plink:hover{text-decoration:underline}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:26px}
@@ -633,13 +634,23 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <div class="proj rv">
         <div class="proj-n">01</div>
         <div>
+          <div class="proj-h"><h4>SUTRADHAR</h4><em>Python · Smart India Hackathon 2026</em><span class="pstat">Shortlisted</span></div>
+          <p>Built for Smart India Hackathon 2026 under problem statement SIH26151 from NTRO, SUTRADHAR de-anonymises threat actors operating on the dark web. It links anonymous personas scattered across marketplaces and forums back to a single author, and then works outward toward a real identity.</p>
+          <p>Most attribution tools lean on one signal, usually writing style, which collapses the moment someone changes how they type. SUTRADHAR correlates six independent signals into a single knowledge graph: stylometry, temporal activity patterns, persona reuse, OPSEC slips, crypto flow and infrastructure. A weak or deliberately spoofed signal no longer breaks the case. A supervised classifier, trained on labelled datasets and reaching 94% accuracy, runs alongside the live stylometry engine, and username enumeration plus email and phone OSINT lookups extend the graph out into the surface web.</p>
+          <p>Investigators get a web console to run the correlation and export a PDF case file built to be court-admissible under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023, so the output holds up as evidence rather than staying an internal lead. Attribution is the real bottleneck in dark web enforcement, because the crime is visible long before the person is. Shortlisted in the college internal round among the top 45 teams, now being strengthened for the next stage.</p>
+          <div class="ptags"><span class="ptag">Python</span><span class="ptag">Stylometry</span><span class="ptag">Knowledge graphs</span><span class="ptag">OSINT</span><span class="ptag">Machine learning</span><span class="ptag">Blockchain analysis</span><a class="plink" href="https://sutradhar-mu.vercel.app" target="_blank" rel="noopener">Live ↗</a><a class="plink" href="https://github.com/hetanshdoshi25-max/sutradhar" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">02</div>
+        <div>
           <div class="proj-h"><h4>secpatch</h4><em>JavaScript · MIT</em></div>
           <p>A passive security auditor for web apps that got shipped fast. A lot of products go live without anyone reviewing them for exposed secrets or weak configuration, so secpatch scans a project and reports what actually needs fixing. Built as a zero-dependency Node CLI, so it doesn't drag in a supply chain of its own just to check yours.</p>
           <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">CLI</span><span class="ptag">DevSecOps</span><span class="ptag">Secrets detection</span><a class="plink" href="https://github.com/hetanshdoshi25-max/secpatch" target="_blank" rel="noopener">GitHub ↗</a></div>
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">02</div>
+        <div class="proj-n">03</div>
         <div>
           <div class="proj-h"><h4>india-dev-apis</h4><em>Python · MIT</em></div>
           <p>A set of open APIs giving developers clean access to Indian postal, banking and government data. The hard part isn't the endpoints, it's keeping them honest, so every endpoint is machine-checked daily and the results are public.</p>
@@ -647,7 +658,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">03</div>
+        <div class="proj-n">04</div>
         <div>
           <div class="proj-h"><h4>resume-analyzer</h4><em>Java</em></div>
           <p>A Java application that reads resumes and pulls them apart into structured, comparable information, cutting down the manual work in first-round screening.</p>
@@ -655,7 +666,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">04</div>
+        <div class="proj-n">05</div>
         <div>
           <div class="proj-h"><h4>Smart Traffic Signal Management</h4><em>C</em></div>
           <p>A traffic signal control system written in C, modelling how signal timing can adapt to changing traffic conditions instead of running on fixed intervals.</p>
@@ -663,7 +674,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">05</div>
+        <div class="proj-n">06</div>
         <div>
           <div class="proj-h"><h4>GitHub profile README</h4><em>Python</em></div>
           <p>An animated GitHub profile built out of hand-generated SVG plates rather than third-party widgets, so nothing depends on an external service staying online.</p>
@@ -676,6 +687,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <div class="skill"><i>Languages</i><ul><li>Python</li><li>JavaScript</li><li>Java</li><li>C</li><li>HTML &amp; CSS</li></ul></div>
       <div class="skill"><i>AI &amp; automation</i><ul><li>LLM integration</li><li>Voice interfaces</li><li>Computer vision</li><li>Desktop automation</li></ul></div>
       <div class="skill"><i>Backend</i><ul><li>FastAPI &amp; REST design</li><li>Node.js CLI tooling</li><li>Firebase &amp; Supabase</li><li>Automated testing</li></ul></div>
+      <div class="skill"><i>Cybersecurity &amp; OSINT</i><ul><li>Threat-actor attribution</li><li>Stylometry &amp; authorship analysis</li><li>OSINT enumeration</li><li>Blockchain transaction analysis</li></ul></div>
       <div class="skill"><i>Product</i><ul><li>Frontend &amp; motion design</li><li>Deployment &amp; DNS</li><li>Security hardening</li><li>Shipping solo</li></ul></div>
     </div>
     <div class="cta-row rv">
@@ -720,7 +732,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>07 — Collaborations</em><s></s></div>
     <h2 class="sec">Brand <b>collaborations</b></h2>
-    <p class="lede rv">Paid and partnered work created with brands across aviation, tech, grooming and fragrance.</p>
+    <p class="lede rv">Paid and partnered work created with brands across aviation, tech, grooming, fitness and fragrance.</p>
     <div class="brands">
       <span class="brand">Air India</span>
       <span class="bsep">◆</span>
@@ -736,12 +748,16 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <span class="bsep">◆</span>
       <span class="brand">Mancode</span>
       <span class="bsep">◆</span>
+      <span class="brand">Wishcare</span>
+      <span class="bsep">◆</span>
+      <span class="brand">Big Muscles</span>
+      <span class="bsep">◆</span>
       <span class="brand">Hira Perfumes</span>
       <span class="bsep">◆</span>
       <span class="brand">La French Perfume</span>
     </div>
-    <div class="brand-count rv"><span>Nine brands to date</span><s></s></div>
-    <div class="sheet-note rv"><s></s>Contact sheet — 7 reels</div>
+    <div class="brand-count rv"><span>Eleven brands to date</span><s></s></div>
+    <div class="sheet-note rv"><s></s>Contact sheet — 10 reels</div>
     <div class="sheet" data-reels="collabs"></div>
     <div class="more" data-more="collabs"></div>
   </div>
@@ -931,7 +947,7 @@ addEventListener('scroll',()=>{sv.style.transform=`rotate(${scrollY*.03}deg)`},{
 /* ---- contact sheets ---- */
 const REELS={
  aethon:{lab:'Aethon',items:[['reel','DYZur-JNTkh'],['reel','DbU1tNWM3JY'],['reel','DbQZTIjszp6'],['reel','DZe-9PPsH32'],['reel','DZcCqSUssWR'],['reel','DZGTK0xTHcl'],['reel','DYrxMqbMydc']]},
- collabs:{lab:'Collab',items:[['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
+ collabs:{lab:'Collab',items:[['reel','DdMh_kJTSe8'],['reel','DdCWws1uLEV'],['reel','Dc7-XuhupbH'],['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
 };
 const FIRST=6;
 let CUR={key:null,i:0};
