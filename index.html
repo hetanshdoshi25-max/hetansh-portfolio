@@ -752,13 +752,23 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <div class="proj rv">
         <div class="proj-n">02</div>
         <div>
+          <div class="proj-h"><h4>Fair Drop</h4><em>TypeScript · BNB26 Hackathon</em></div>
+          <p>Built for the BNB26 internal round, around one problem: selling 500 seats to 50,000 people without letting bots win. Most ticket drops reward whoever has the fastest connection or the most aggressive script. Fair Drop separates entry from allocation, so speed should not buy an extra chance. Eligible users enter once during a fixed window, repeated requests don't create extra entries, and seats are allocated only after the window closes, through a randomized draw.</p>
+          <p>The draw is verifiable. The SHA-256 hash of a secret seed is published when entry opens and the seed is revealed afterwards, so anyone can re-run the Fisher–Yates shuffle in their own browser and check every rank. One eligible account gets one entry, enforced by the database. Per-account and per-IP token buckets in Redis throttle floods, and an adaptive proof-of-work puzzle makes every automated attempt cost CPU. Winners get a timed hold and pick a specific seat that can never be double-booked, and unconfirmed seats roll to a waitlist automatically.</p>
+          <p>Organizers get a live 3D seat arena and a fairness audit: arrival-versus-rank correlation, and win rates by arrival time, request volume and human signal. A k6 attack lab simulates bots, bursts and retries against the same API real fans use. Fairness measured, not just claimed.</p>
+          <div class="ptags"><span class="ptag">TypeScript</span><span class="ptag">React</span><span class="ptag">three.js</span><span class="ptag">Node.js</span><span class="ptag">PostgreSQL</span><span class="ptag">Redis</span><span class="ptag">k6</span><a class="plink" href="https://bnb26brainiancsinternalround-production.up.railway.app" target="_blank" rel="noopener">Live ↗</a><a class="plink" href="https://github.com/hetanshdoshi25-max/BNB26_Brainiancs_Internal_Round" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-n">03</div>
+        <div>
           <div class="proj-h"><h4>secpatch</h4><em>JavaScript · MIT</em></div>
           <p>A passive security auditor for web apps that got shipped fast. A lot of products go live without anyone reviewing them for exposed secrets or weak configuration, so secpatch scans a project and reports what actually needs fixing. Built as a zero-dependency Node CLI, so it doesn't drag in a supply chain of its own just to check yours.</p>
           <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">CLI</span><span class="ptag">DevSecOps</span><span class="ptag">Secrets detection</span><a class="plink" href="https://github.com/hetanshdoshi25-max/secpatch" target="_blank" rel="noopener">GitHub ↗</a></div>
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">03</div>
+        <div class="proj-n">04</div>
         <div>
           <div class="proj-h"><h4>india-dev-apis</h4><em>Python · MIT</em></div>
           <p>A set of open APIs giving developers clean access to Indian postal, banking and government data. The hard part isn't the endpoints, it's keeping them honest, so every endpoint is machine-checked daily and the results are public.</p>
@@ -766,7 +776,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">04</div>
+        <div class="proj-n">05</div>
         <div>
           <div class="proj-h"><h4>resume-analyzer</h4><em>Java</em></div>
           <p>A Java application that reads resumes and pulls them apart into structured, comparable information, cutting down the manual work in first-round screening.</p>
@@ -774,7 +784,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">05</div>
+        <div class="proj-n">06</div>
         <div>
           <div class="proj-h"><h4>Smart Traffic Signal Management</h4><em>C</em></div>
           <p>A traffic signal control system written in C, modelling how signal timing can adapt to changing traffic conditions instead of running on fixed intervals.</p>
@@ -782,7 +792,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
         </div>
       </div>
       <div class="proj rv">
-        <div class="proj-n">06</div>
+        <div class="proj-n">07</div>
         <div>
           <div class="proj-h"><h4>GitHub profile README</h4><em>Python</em></div>
           <p>An animated GitHub profile built out of hand-generated SVG plates rather than third-party widgets, so nothing depends on an external service staying online.</p>
