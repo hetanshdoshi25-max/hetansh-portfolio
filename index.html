@@ -409,6 +409,13 @@ body.open #pre{opacity:0;transition:opacity .45s}
 .sub-intro{color:var(--mut);font-size:15.5px;line-height:1.82;max-width:780px}
 .sub-intro strong{color:var(--fg);font-weight:500}
 .sub .mode-head{margin-top:44px}
+
+/* Collaborations: brands grouped into category boxes */
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:34px}
+.bcat{background:var(--surf);padding:24px 24px 26px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.bcat i{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:10px;display:flex;justify-content:space-between;width:100%}
+.bcat i b{font-weight:400;color:var(--mut)}
+.bcat .brand{font-size:clamp(20px,2.1vw,27px);white-space:normal}
 </style>
 </head>
 <body>
@@ -852,38 +859,19 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>07 — Collaborations</em><s></s></div>
     <h2 class="sec">Brand <b>collaborations</b></h2>
-    <p class="lede rv">Paid and partnered work created with brands across aviation, tech, grooming, food, fitness and fragrance.</p>
-    <div class="brands">
-      <span class="brand">Air India</span>
-      <span class="bsep">◆</span>
-      <span class="brand">OnePlus</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Lays</span>
-      <span class="bsep">◆</span>
-      <span class="brand">The Man Company</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Fikn</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Mannlich</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Tomhill Luxury</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Mancode</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Wishcare</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Big Muscles</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Beardo</span>
-      <span class="bsep">◆</span>
-      <span class="brand">The Pant Project</span>
-      <span class="bsep">◆</span>
-      <span class="brand">Hira Perfumes</span>
-      <span class="bsep">◆</span>
-      <span class="brand">La French Perfume</span>
+    <p class="lede rv">Paid and partnered work created with brands across fragrance, grooming, aviation, tech, food, fitness, fashion and home care.</p>
+    <div class="bgrid">
+      <div class="bcat"><i>Fragrance<b>06</b></i><span class="brand">The Man Company</span><span class="brand">Hira Perfumes</span><span class="brand">La French Perfume</span><span class="brand">Denver</span><span class="brand">Tomhill Luxury</span><span class="brand">Fikn</span></div>
+      <div class="bcat"><i>Grooming &amp; Personal Care<b>04</b></i><span class="brand">Beardo</span><span class="brand">Wishcare</span><span class="brand">Mancode</span><span class="brand">Mannlich</span></div>
+      <div class="bcat"><i>Aviation &amp; Tech<b>02</b></i><span class="brand">Air India</span><span class="brand">OnePlus</span></div>
+      <div class="bcat"><i>Food &amp; Beverage<b>02</b></i><span class="brand">Lays</span><span class="brand">Benne Talk</span></div>
+      <div class="bcat"><i>Fitness<b>01</b></i><span class="brand">Big Muscles</span></div>
+      <div class="bcat"><i>Fashion<b>01</b></i><span class="brand">The Pant Project</span></div>
+      <div class="bcat"><i>Home Care<b>01</b></i><span class="brand">Ariel</span></div>
+      <div class="bcat"><i>Culture &amp; Devotional<b>01</b></i><span class="brand">Bappa.Org</span></div>
     </div>
-    <div class="brand-count rv"><span>Fourteen brands to date</span><s></s></div>
-    <div class="sheet-note rv"><s></s>Contact sheet — 14 reels</div>
+    <div class="brand-count rv"><span>Eighteen brands to date</span><s></s></div>
+    <div class="sheet-note rv"><s></s>Contact sheet — 18 reels</div>
     <div class="sheet" data-reels="collabs"></div>
     <div class="more" data-more="collabs"></div>
   </div>
@@ -1074,7 +1062,7 @@ addEventListener('scroll',()=>{sv.style.transform=`rotate(${scrollY*.03}deg)`},{
 const REELS={
  aethon:{lab:'Aethon Desktop',items:[['reel','DZe-9PPsH32'],['reel','DbQZTIjszp6'],['reel','DbU1tNWM3JY'],['reel','Ddm5gd_MZMV'],['reel','Ddyd-ZWxDF1'],['reel','Dd98Ls6gNdg']]},
  homepod:{lab:'Aethon HomePod',items:[['reel','DdssBZRs5M4'],['reel','DduUUiFyqIc']]},
- collabs:{lab:'Collab',items:[['reel','DddiStfO8JB'],['reel','DdTftqtOS7T'],['reel','DdRmFPmOXA5'],['reel','DdbfXTYuaYu'],['reel','DdMh_kJTSe8'],['reel','DdCWws1uLEV'],['reel','Dc7-XuhupbH'],['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
+ collabs:{lab:'Collab',items:[['reel','DeMQCyCu2AF'],['reel','DeJPUUDOaEn'],['reel','Dd6M-fDuuCO'],['reel','DdjoTlzOANC'],['reel','DddiStfO8JB'],['reel','DdTftqtOS7T'],['reel','DdRmFPmOXA5'],['reel','DdbfXTYuaYu'],['reel','DdMh_kJTSe8'],['reel','DdCWws1uLEV'],['reel','Dc7-XuhupbH'],['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
 };
 const FIRST=6;
 let CUR={key:null,i:0};
