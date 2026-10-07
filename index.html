@@ -401,6 +401,14 @@ body.open #pre{opacity:0;transition:opacity .45s}
   body{cursor:auto}
 }
 :focus-visible{outline:2px solid var(--klein-hi);outline-offset:3px}
+
+/* Aethon sub-sections: desktop / mobile / HomePod */
+.sub{margin-top:96px;padding-top:44px;border-top:1px solid var(--ln)}
+.sub-tag{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--acc);text-transform:uppercase}
+.sub h3.sub-h{font-family:var(--display);font-size:clamp(30px,4.2vw,48px);font-weight:400;line-height:1.08;letter-spacing:-.018em;margin:14px 0 14px}
+.sub-intro{color:var(--mut);font-size:15.5px;line-height:1.82;max-width:780px}
+.sub-intro strong{color:var(--fg);font-weight:500}
+.sub .mode-head{margin-top:44px}
 </style>
 </head>
 <body>
@@ -554,72 +562,169 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>04 — The Startup</em><s></s></div>
     <h2 class="sec">Aethon</h2>
-    <p class="lede rv">Founder &amp; Developer. An AI assistant built to talk, see, and act, not just chat back.</p>
+    <p class="lede rv">Founder &amp; Developer. One AI assistant across your desktop, your phone and your home, built to talk, see, and act, not just chat back.</p>
     <div class="two">
       <div class="rv">
         <p>Aethon started with one obsession: <strong>Iron Man's JARVIS</strong>. Not just the idea of it, but actually building something close to it, alone.</p>
         <p>I'm the sole founder and developer. No team, no co-founder. Every line of code, every design decision, every deployment call has been on me. Built primarily in <strong>Python and JavaScript</strong>, Aethon and its desktop assistant <strong>Zyra</strong> form a system designed to hold a conversation, watch your screen, and actually do things on your machine.</p>
       </div>
       <div class="rv">
-        <p>What started as curiosity turned into self-taught coding through YouTube and constant experimentation, and eventually into a working product I'm now building toward a real company.</p>
+        <p>What started as curiosity turned into self-taught coding through YouTube and constant experimentation, and eventually into a working product I'm now building toward a real company. Today it runs in three places: <strong>the desktop</strong>, <strong>an Android app</strong> and <strong>a HomePod-style speaker</strong>.</p>
         <p>The goal has never been just another AI chatbot. It's an assistant that can see your screen, hear you, and get things done, all while <strong>ensuring complete privacy and safety</strong> for the user.</p>
       </div>
     </div>
     <div class="stat-strip rv">
       <div class="stat"><b>01</b><span>Founder &amp; developer</span></div>
-      <div class="stat"><b>02</b><span>Languages · Python, JS</span></div>
-      <div class="stat"><b>13</b><span>Operating modes</span></div>
+      <div class="stat"><b>03</b><span>Platforms · Desktop, Mobile, HomePod</span></div>
+      <div class="stat"><b>24</b><span>Desktop features</span></div>
       <div class="stat"><b>∞</b><span>Rebuilds, and counting</span></div>
     </div>
-    <div class="mode-head rv"><h3>What it does</h3><em>Thirteen modes, one assistant</em></div>
-    <div class="modes rv">
-      <div class="mode lead">
-        <h5>Voice + Vision <em>Default</em></h5>
-        <ul>
-          <li>Natural voice conversation, Zyra replies in her own voice</li>
-          <li>Camera vision, ambient and proactive, seeing before being asked</li>
-          <li>PC control: open apps, volume, brightness, media, screen lock, screenshots</li>
-          <li>Screen Vision reads your screen and explains it on command</li>
-          <li>Watch Me Work gives passive screen tips, off by default</li>
-        </ul>
+
+    <!-- 04.1 DESKTOP -->
+    <div class="sub" id="aethon-desktop">
+      <div class="sub-tag rv">04.1 — Aethon Desktop</div>
+      <h3 class="sub-h rv">AETHON-ZYRA for Windows</h3>
+      <p class="sub-intro rv">The flagship. A Windows app where you talk and it talks back in real time through <strong>Gemini Live</strong>, in Hinglish, as <strong>Aethon</strong> or <strong>Zyra</strong>. It sees your camera and screen, controls your PC, places real phone calls, books and orders for you, and a 3D light-particle humanoid in the centre reacts to everything it does.</p>
+      <div class="mode-head rv"><h3>What it does</h3><em>Twenty-four features, one assistant</em></div>
+      <div class="modes rv">
+        <div class="mode lead">
+          <h5>Voice + Vision <em>Default</em></h5>
+          <ul>
+            <li>Natural voice conversation, Zyra replies in her own voice</li>
+            <li>Camera vision, ambient and proactive, seeing before being asked</li>
+            <li>PC control: open apps, volume, brightness, media, screen lock, screenshots</li>
+            <li>Screen Vision reads your screen and explains it on command</li>
+            <li>Watch Me Work gives passive screen tips, off by default</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Meeting Mode</h5><p>Records, transcribes, then hands back a summary with action items.</p></div>
+        <div class="mode"><h5>Task Manager</h5><p>Add and complete tasks, by voice or by hand.</p></div>
+        <div class="mode"><h5>Writer</h5><p>Drafts emails, messages and posts in your own voice and style.</p></div>
+        <div class="mode"><h5>Ask</h5><p>AI chat with image and file support, plus memory that carries over across conversations.</p></div>
+        <div class="mode"><h5>Ask My Docs</h5><p>Upload a PDF or text file and question it directly.</p></div>
+        <div class="mode"><h5>Co-pilot</h5><p>Live meeting support with quick-ask and auto-listen.</p></div>
+        <div class="mode"><h5>Focus Coach</h5><p>Pomodoro sessions with a camera-based mood check.</p></div>
+        <div class="mode"><h5>Sales Co-pilot</h5><p>Live objection radar during calls, plus an automatic wrap-up.</p></div>
+        <div class="mode lead">
+          <h5>Hand Gesture Control <em>Touchless</em></h5>
+          <ul>
+            <li>Full PC control with your hands, no mouse or keyboard</li>
+            <li>Point to move the cursor, pinch to click</li>
+            <li>Fist to scroll down, peace sign to scroll up</li>
+            <li>Runs in the background, so it controls any app even with Aethon minimised</li>
+          </ul>
+        </div>
+        <div class="mode lead">
+          <h5>Real Phone Calls <em>New</em></h5>
+          <ul>
+            <li>Places real SIM calls from your own Android phone, linked over Wi-Fi or USB</li>
+            <li>Confirms before dialling and matches contacts, Hindi names included</li>
+            <li>Shows live call status straight from the phone, then offers a WhatsApp follow-up</li>
+            <li>Phone numbers are never written to disk or logs</li>
+          </ul>
+        </div>
+        <div class="mode lead">
+          <h5>Phone Control <em>via Telegram</em></h5>
+          <ul>
+            <li>Control your PC from anywhere by sending commands on Telegram</li>
+            <li>Take screenshots, open apps, search YouTube or Google, open any site</li>
+            <li>Send WhatsApp messages by saved contact name</li>
+            <li>Compose and send email, and manage contacts</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Memory <em>New</em></h5><p>Remembers what matters, a new job, an exam, the people in your life, each with its date, and brings it up naturally later. Everything stays on your PC and is fully editable.</p></div>
+        <div class="mode"><h5>Scheduler <em>New</em></h5><p>Reminders, AI tasks and monitors set in plain words like "kal subah 8 baje". Timezone-aware, retries failures and notifies you.</p></div>
+        <div class="mode"><h5>Connectors <em>New</em></h5><p>Reads Gmail, Google Calendar, GitHub, Notion and Slack into one feed, flags what needs attention and gives a spoken briefing.</p></div>
+        <div class="mode"><h5>Plugins <em>New</em></h5><p>Acts inside those apps: send mail, create events, merge PRs, post on Slack, write Notion pages, with permission levels and a confirmation for every action.</p></div>
+        <div class="mode"><h5>Movie Booking <em>New</em></h5><p>Finds the movie, show and seats on BookMyShow by voice and stops at the payment screen. You pay, it never does.</p></div>
+        <div class="mode"><h5>Food Ordering <em>New</em></h5><p>Builds your order on Swiggy or Zomato up to the cart, then hands over the address and payment to you.</p></div>
+        <div class="mode lead">
+          <h5>Audit Files <em>For CA firms</em></h5>
+          <ul>
+            <li>Upload the trial balance, ledgers, registers and bank statements for an engagement</li>
+            <li>Classifies, extracts and validates them, maps accounts and runs reconciliations</li>
+            <li>Audit checks, sampling, exceptions to review and workpapers, exported to Excel</li>
+            <li>Aethon assists, the CA decides and signs off</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Game Mode <em>New</em></h5><p>Offline games played entirely by hand gestures, with a live Game Coach whose commentary is worked out from the real board, never bluffed.</p></div>
+        <div class="mode"><h5>Media Feed</h5><p>Live news headlines and trending videos in a full-screen dashboard. Triggered by voice or button, videos play in-app with no browser redirect.</p></div>
+        <div class="mode"><h5>File Generation</h5><p>Generates presentations, Word documents and images in eight styles from a spoken topic. Files auto-save to the desktop and open automatically.</p></div>
+        <div class="mode"><h5>Website Safety <em>New</em></h5><p>Paste or say a link and get a safety score with the reasons: HTTPS, valid SSL, domain age and more.</p></div>
+        <div class="mode"><h5>Health Assist <em>New</em></h5><p>General health guidance by voice, plus nearby hospitals when you need them.</p></div>
       </div>
-      <div class="mode"><h5>Meeting Mode</h5><p>Records, transcribes, then hands back a summary with action items.</p></div>
-      <div class="mode"><h5>Task Manager</h5><p>Add and complete tasks, by voice or by hand.</p></div>
-      <div class="mode"><h5>Writer</h5><p>Drafts emails, messages and posts in your own voice and style.</p></div>
-      <div class="mode"><h5>Ask</h5><p>AI chat with image and file support, plus memory that carries over across conversations.</p></div>
-      <div class="mode"><h5>Ask My Docs</h5><p>Upload a PDF or text file and question it directly.</p></div>
-      <div class="mode"><h5>Co-pilot</h5><p>Live meeting support with quick-ask and auto-listen.</p></div>
-      <div class="mode"><h5>Focus Coach</h5><p>Pomodoro sessions with a camera-based mood check.</p></div>
-      <div class="mode"><h5>Sales Co-pilot</h5><p>Live objection radar during calls, plus an automatic wrap-up.</p></div>
-      <div class="mode lead">
-        <h5>Hand Gesture Control <em>Touchless</em></h5>
-        <ul>
-          <li>Full PC control with your hands, no mouse or keyboard</li>
-          <li>Point to move the cursor, pinch to click</li>
-          <li>Fist to scroll down, peace sign to scroll up</li>
-          <li>Runs in the background, so it controls any app even with Aethon minimised</li>
-        </ul>
-      </div>
-      <div class="mode lead">
-        <h5>Phone Control <em>via Telegram</em></h5>
-        <ul>
-          <li>Control your PC from anywhere by sending commands on Telegram</li>
-          <li>Take screenshots, open apps, search YouTube or Google, open any site</li>
-          <li>Send WhatsApp messages by saved contact name</li>
-          <li>Compose and send email, and manage contacts</li>
-        </ul>
-      </div>
-      <div class="mode"><h5>Media Feed</h5><p>Live news headlines and trending videos in a full-screen dashboard. Triggered by voice or button, videos play in-app with no browser redirect.</p></div>
-      <div class="mode"><h5>File Generation</h5><p>Generates presentations and Word documents from a spoken topic. Files auto-save to the desktop and open automatically.</p></div>
+      <p class="privacy rv">All vision and screen data is processed with user consent and privacy-first design principles.</p>
+      <div class="sheet-note rv"><s></s>Contact sheet — Aethon Desktop in motion</div>
+      <div class="sheet" data-reels="aethon"></div>
+      <div class="more" data-more="aethon"></div>
     </div>
-    <p class="privacy rv">All vision and screen data is processed with user consent and privacy-first design principles.</p>
+
+    <!-- 04.2 MOBILE -->
+    <div class="sub" id="aethon-mobile">
+      <div class="sub-tag rv">04.2 — Aethon Mobile</div>
+      <h3 class="sub-h rv">Aethon Chat for Android</h3>
+      <p class="sub-intro rv">Aethon in your pocket. The same voice, the same memory and the same account as the desktop, rebuilt as a native Android app. Tap the 3D orb and talk: it listens, thinks and speaks back, keeps going with the screen off, and reaches your PC whenever the job needs it.</p>
+      <div class="mode-head rv"><h3>What it does</h3><em>Works now on Android</em></div>
+      <div class="modes rv">
+        <div class="mode lead">
+          <h5>Talk to Aethon / Zyra <em>Live voice</em></h5>
+          <ul>
+            <li>Live voice conversation through Gemini Live, tap the orb on Home</li>
+            <li>Interrupt by talking, with echo cancellation through the phone's call mode</li>
+            <li>Talk with the screen off, the conversation keeps going in the background with an END button in the notification</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Ask AI Chat</h5><p>Text chat with the same tools as voice: reminders, apps, calls and memory.</p></div>
+        <div class="mode"><h5>Calls, WhatsApp &amp; SMS</h5><p>"Call Mom", "WhatsApp Rahul I'm late", always confirmed first, you tap Send.</p></div>
+        <div class="mode"><h5>Apps, Alarms &amp; Timers</h5><p>"Open YouTube", "alarm at 6:30", "10 minute timer".</p></div>
+        <div class="mode"><h5>Memory</h5><p>Remembers people, plans and big events from voice and chat. View, edit, pin or forget, and sync it with the desktop.</p></div>
+        <div class="mode"><h5>Ask My Docs</h5><p>Add a PDF, Word, PowerPoint, Excel, text file or photo and ask about it, also by voice.</p></div>
+        <div class="mode"><h5>Create</h5><p>Writer for emails, posts and letters, plus real .pptx and .docx files saved in Downloads/Aethon.</p></div>
+        <div class="mode"><h5>News</h5><p>Latest headlines by section or search, "what is the tech news?"</p></div>
+        <div class="mode"><h5>Website Safety</h5><p>Genuine or fake? Look-alike brands, bait links, password and OTP traps.</p></div>
+        <div class="mode"><h5>Co-pilot</h5><p>Live mode to ask anything in the moment. In-person mode runs in the background with the phone locked, then gives a topic-wise summary with action items into Tasks.</p></div>
+        <div class="mode"><h5>Music &amp; Media</h5><p>"Play Arijit Singh on Spotify", pause, next, volume up, all by voice.</p></div>
+        <div class="mode"><h5>Tasks &amp; Reminders</h5><p>"Add a task…", "remind me tomorrow at 9…", reminders ring as notifications.</p></div>
+        <div class="mode lead">
+          <h5>PC Control <em>via your PC</em></h5>
+          <ul>
+            <li>Open apps, volume, lock, media, typing, windows and web search, by voice or the PC tab</li>
+            <li>"What's on my laptop screen?", the desktop takes a screenshot and answers</li>
+            <li>Movie booking and food ordering on the PC, started by voice from the phone</li>
+            <li>Audit Files overview: documents, open exceptions and reconciliations</li>
+          </ul>
+        </div>
+      </div>
+      <p class="privacy rv">Same login, trial and plan as the desktop app. Calls and messages are always confirmed before anything is sent.</p>
+    </div>
+
+    <!-- 04.3 HOMEPOD -->
+    <div class="sub" id="aethon-homepod">
+      <div class="sub-tag rv">04.3 — Aethon HomePod</div>
+      <h3 class="sub-h rv">Aethon, at home</h3>
+      <p class="sub-intro rv">Aethon as a smart speaker for your room. No screen, no keyboard, just your voice. Say the wake word, ask anything and it answers out loud, then keeps listening for the follow-up the way a person would, before going quietly back to sleep.</p>
+      <div class="mode-head rv"><h3>What it does</h3><em>Voice only, always ready</em></div>
+      <div class="modes rv">
+        <div class="mode lead">
+          <h5>Human-like Interactions <em>Hands-free</em></h5>
+          <ul>
+            <li>Natural, flowing conversation in Aethon's own voice</li>
+            <li>Ask a follow-up without repeating the wake word</li>
+            <li>Goes back to sleep on its own after a few quiet seconds</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Play Songs</h5><p>Ask for any song or artist and it plays on the speaker.</p></div>
+        <div class="mode"><h5>Live News</h5><p>Current headlines and live updates, read out on request.</p></div>
+        <div class="mode"><h5>Calling</h5><p>Place calls by voice, straight from the speaker.</p></div>
+        <div class="mode"><h5>Texts</h5><p>Send SMS and WhatsApp messages by voice.</p></div>
+      </div>
+      <p class="privacy rv">Calling and texting need your phone on the same Wi-Fi network as the HomePod.</p>
+    </div>
+
     <div class="cta-row rv">
       <a class="btn" href="https://aethonchat.com" target="_blank" rel="noopener"><span>Try Aethon ↗</span></a>
       <a class="btn ghost" href="https://www.instagram.com/aethonchat" target="_blank" rel="noopener"><span>@aethonchat ↗</span></a>
     </div>
-    <div class="sheet-note rv"><s></s>Contact sheet — Aethon in motion</div>
-    <div class="sheet" data-reels="aethon"></div>
-    <div class="more" data-more="aethon"></div>
   </div>
 </section>
 
@@ -952,7 +1057,7 @@ addEventListener('scroll',()=>{sv.style.transform=`rotate(${scrollY*.03}deg)`},{
 
 /* ---- contact sheets ---- */
 const REELS={
- aethon:{lab:'Aethon',items:[['reel','DYZur-JNTkh'],['reel','DbU1tNWM3JY'],['reel','DbQZTIjszp6'],['reel','DZe-9PPsH32'],['reel','DZcCqSUssWR'],['reel','DZGTK0xTHcl'],['reel','DYrxMqbMydc']]},
+ aethon:{lab:'Aethon Desktop',items:[['reel','DZe-9PPsH32'],['reel','DbQZTIjszp6'],['reel','DbU1tNWM3JY'],['reel','Ddm5gd_MZMV'],['reel','Ddyd-ZWxDF1'],['reel','Dd98Ls6gNdg']]},
  collabs:{lab:'Collab',items:[['reel','DddiStfO8JB'],['reel','DdTftqtOS7T'],['reel','DdRmFPmOXA5'],['reel','DdbfXTYuaYu'],['reel','DdMh_kJTSe8'],['reel','DdCWws1uLEV'],['reel','Dc7-XuhupbH'],['reel','Dctm2bUunMK'],['reel','Db4-oyxO3U_'],['reel','Daufl9AuDQH'],['reel','Da3OccIuB_U'],['reel','Da0Ca7Ot5FJ'],['reel','DbSigosu1GA'],['reel','DaVqD8guHZN']]},
 };
 const FIRST=6;
