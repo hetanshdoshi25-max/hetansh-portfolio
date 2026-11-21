@@ -136,6 +136,11 @@ h1 .ch.in{opacity:1;transform:none;filter:none}
 .mode li{font-size:13.5px;color:var(--mut);padding-left:15px;position:relative;margin-bottom:7px;line-height:1.6}
 .mode li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--acc)}
 .mode p{font-size:13.5px;color:var(--mut);line-height:1.6}
+.status-badge{display:inline-flex;align-items:center;gap:8px;margin-left:14px;padding:5px 11px;border:1px solid var(--acc);font-size:9px;letter-spacing:.2em;color:var(--klein-hi);vertical-align:middle}
+.status-badge i{width:6px;height:6px;border-radius:50%;background:#E8B44C;box-shadow:0 0 0 0 rgba(232,180,76,.6);animation:sbP 2s infinite}
+@keyframes sbP{70%{box-shadow:0 0 0 7px rgba(232,180,76,0)}100%{box-shadow:0 0 0 0 rgba(232,180,76,0)}}
+.mode.soon{opacity:.6;grid-column:span 2}
+@media(max-width:560px){.status-badge{margin:10px 0 0;display:flex;width:max-content}}
 .privacy{margin-top:24px;padding:17px 21px;border-left:2px solid var(--acc);background:rgba(90,108,255,.07);font-size:13.5px;color:var(--mut)}
 
 /* ---------- buttons ---------- */
@@ -381,7 +386,7 @@ body.open #pre{opacity:0;transition:opacity .45s}
   .hero-grid{grid-template-columns:1fr;gap:50px}
   .bezel{width:min(72%,296px);order:-1}
   .two,.c-grid,.tear{grid-template-columns:1fr}
-  .mode.lead{grid-column:span 1}
+  .mode.lead,.mode.soon{grid-column:span 1}
   .scroll-cue,.marker{display:none}
 }
 @media(max-width:560px){
@@ -426,6 +431,9 @@ body.open #pre{opacity:0;transition:opacity .45s}
 .recog p{color:var(--mut);font-size:15.5px;line-height:1.8;max-width:56ch;margin-bottom:14px}
 .recog-pts{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
 .recog-pts span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);border:1px solid var(--ln);padding:8px 13px}
+.bmulti{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.bmulti .bx{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--mut);text-decoration:none;border-bottom:1px solid var(--ln);padding-bottom:1px;transition:color .3s,border-color .3s}
+.bmulti .bx:hover{color:var(--acc);border-color:var(--acc)}
 .bcat a.brand{text-decoration:none;cursor:pointer}
 .evcat .evl{display:flex;flex-direction:column;width:100%;margin-top:10px;border-top:1px solid var(--ln)}
 .evcat{grid-column:1/-1}
@@ -589,20 +597,20 @@ body.open #pre{opacity:0;transition:opacity .45s}
   <div class="wrap">
     <div class="eyebrow rv"><em>04 – The Startup</em><s></s></div>
     <h2 class="sec">Aethon</h2>
-    <p class="lede rv">Founder &amp; Developer. One AI assistant across your desktop, your phone and your home, built to talk, see, and act, not just chat back.</p>
+    <p class="lede rv">Founder &amp; Developer. One AI assistant across desktop, phone, home and WhatsApp, made to talk, see and act, not just chat.</p>
     <div class="two">
       <div class="rv">
         <p>Aethon started with one obsession: <strong>Iron Man's JARVIS</strong>. Not just the idea of it, but actually building something close to it, alone.</p>
         <p>I'm the sole founder and developer. No team, no co-founder. Every line of code, every design decision, every deployment call has been on me. Built primarily in <strong>Python and JavaScript</strong>, Aethon and its desktop assistant <strong>Zyra</strong> form a system designed to hold a conversation, watch your screen, and actually do things on your machine.</p>
       </div>
       <div class="rv">
-        <p>What started as curiosity turned into self-taught coding through YouTube and constant experimentation, and eventually into a working product I'm now building toward a real company. Today it runs in three places: <strong>the desktop</strong>, <strong>an Android app</strong> and <strong>a HomePod-style speaker</strong>.</p>
+        <p>What started as curiosity turned into self-taught coding through YouTube and constant experimentation, and eventually into a working product I'm now building toward a real company. Today it runs in four places: <strong>the desktop</strong>, <strong>an Android app</strong>, <strong>a HomePod-style speaker</strong> and <strong>WhatsApp</strong>.</p>
         <p>The goal has never been just another AI chatbot. It's an assistant that can see your screen, hear you, and get things done, all while <strong>ensuring complete privacy and safety</strong> for the user.</p>
       </div>
     </div>
     <div class="stat-strip rv">
       <div class="stat"><b>01</b><span>Founder &amp; developer</span></div>
-      <div class="stat"><b>03</b><span>Platforms · Desktop, Mobile, HomePod</span></div>
+      <div class="stat"><b>04</b><span>Platforms · Desktop, Mobile, HomePod, WhatsApp</span></div>
       <div class="stat"><b>24</b><span>Desktop features</span></div>
       <div class="stat"><b>∞</b><span>Rebuilds, and counting</span></div>
     </div>
@@ -751,6 +759,31 @@ body.open #pre{opacity:0;transition:opacity .45s}
       <div class="more" data-more="homepod"></div>
     </div>
 
+    <!-- 04.4 AETHON ONE -->
+    <div class="sub" id="aethon-one">
+      <div class="sub-tag rv">04.4 – Aethon One <span class="status-badge"><i></i>In ONDC certification</span></div>
+      <h3 class="sub-h rv">Aethon One for WhatsApp</h3>
+      <p class="sub-intro rv">Aethon in the app you already use. No download, just message and it's done.</p>
+      <div class="mode-head rv"><h3>What it does</h3><em>Right inside WhatsApp</em></div>
+      <div class="modes rv">
+        <div class="mode lead">
+          <h5>Metro tickets <em>New</em></h5>
+          <ul>
+            <li>Message "Andheri se Ghatkopar" and get the fares</li>
+            <li>Pick a ticket and receive the QR right in the chat</li>
+            <li>Built on ONDC as a certified-track buyer app</li>
+          </ul>
+        </div>
+        <div class="mode"><h5>Show my ticket</h5><p>Lost the QR? Just ask and it's sent again.</p></div>
+        <div class="mode"><h5>Complaints that actually move</h5><p>Raise an issue with a photo, get the operator's solution in the chat, and if you don't like it, it goes straight to the grievance officer. No call centre, no forms.</p></div>
+        <div class="mode"><h5>Refund clarity</h5><p>If a booking fails, it tells you exactly how much was deducted and when it comes back.</p></div>
+        <div class="mode"><h5>Hinglish first</h5><p>Talks the way you do, in Hindi, English or both.</p></div>
+        <div class="mode"><h5>Built for everyone</h5><p>Made for people who find apps confusing. If you can send a WhatsApp message, you can use it.</p></div>
+        <div class="mode soon"><h5>Food ordering <em>Soon</em></h5><p>Coming soon.</p></div>
+      </div>
+      <p class="privacy rv">Every booking and payment needs your confirmation. It never asks for your UPI PIN, OTP or card details.</p>
+    </div>
+
     <div class="cta-row rv">
       <a class="btn" href="https://aethonchat.com" target="_blank" rel="noopener"><span>Try Aethon ↗</span></a>
       <a class="btn ghost" href="https://www.instagram.com/aethonchat" target="_blank" rel="noopener"><span>@aethonchat ↗</span></a>
@@ -882,16 +915,16 @@ body.open #pre{opacity:0;transition:opacity .45s}
     <p class="lede rv">Paid and partnered work created with brands across fragrance, grooming, aviation, tech, food, fitness, fashion, home care and events.</p>
     <div class="bgrid">
       <div class="bcat"><i>Fragrance<b>05</b></i><a class="brand" href="https://www.instagram.com/reel/Db4-oyxO3U_/" target="_blank" rel="noopener">The Man Company</a><a class="brand" href="https://www.instagram.com/reel/Dc7-XuhupbH/" target="_blank" rel="noopener">Hira Perfumes</a><a class="brand" href="https://www.instagram.com/reel/DaVqD8guHZN/" target="_blank" rel="noopener">La French Perfume</a><a class="brand" href="https://www.instagram.com/reel/DbSigosu1GA/" target="_blank" rel="noopener">Tomhill Luxury</a><a class="brand" href="https://www.instagram.com/reel/Da3OccIuB_U/" target="_blank" rel="noopener">Fikn</a></div>
-      <div class="bcat"><i>Grooming &amp; Personal Care<b>10</b></i><a class="brand" href="https://www.instagram.com/reel/DdRmFPmOXA5/" target="_blank" rel="noopener">Beardo</a><a class="brand" href="https://www.instagram.com/reel/DdMh_kJTSe8/" target="_blank" rel="noopener">Wishcare</a><a class="brand" href="https://www.instagram.com/reel/Daufl9AuDQH/" target="_blank" rel="noopener">Mancode</a><a class="brand" href="https://www.instagram.com/reel/DdbfXTYuaYu/" target="_blank" rel="noopener">Mannlich</a><a class="brand" href="https://www.instagram.com/reel/DeMQCyCu2AF/" target="_blank" rel="noopener">Denver</a><a class="brand" href="https://www.instagram.com/reel/DeepNfEOxb3/" target="_blank" rel="noopener">The Body Language</a><a class="brand" href="https://www.instagram.com/reel/DeotVRTOIXF/" target="_blank" rel="noopener">Dermacy</a><a class="brand" href="https://www.instagram.com/reel/DetaiIkusK7/" target="_blank" rel="noopener">Vedaplus</a><a class="brand" href="https://www.instagram.com/reel/DfCqmoIO0DM/" target="_blank" rel="noopener">Mantittude</a><a class="brand" href="https://www.instagram.com/reel/DfJkLgYOb-X/" target="_blank" rel="noopener">Savlon</a></div>
-      <div class="bcat"><i>Aviation &amp; Tech<b>03</b></i><a class="brand" href="https://www.instagram.com/reel/Dctm2bUunMK/" target="_blank" rel="noopener">Air India</a><a class="brand" href="https://www.instagram.com/reel/Da0Ca7Ot5FJ/" target="_blank" rel="noopener">OnePlus</a><a class="brand" href="https://www.instagram.com/reel/DeZSUt0Olrk/" target="_blank" rel="noopener">Truke</a></div>
-      <div class="bcat"><i>Food &amp; Beverage<b>03</b></i><a class="brand" href="https://www.instagram.com/reel/DddiStfO8JB/" target="_blank" rel="noopener">Lays</a><a class="brand" href="https://www.instagram.com/reel/Dd6M-fDuuCO/" target="_blank" rel="noopener">Benne Talk</a><a class="brand" href="https://www.instagram.com/reel/DebyPpRufHv/" target="_blank" rel="noopener">We Make Sweets &amp; Snacks</a></div>
-      <div class="bcat"><i>Fitness<b>01</b></i><a class="brand" href="https://www.instagram.com/reel/DdCWws1uLEV/" target="_blank" rel="noopener">Big Muscles</a></div>
-      <div class="bcat"><i>Fashion<b>01</b></i><a class="brand" href="https://www.instagram.com/reel/DdTftqtOS7T/" target="_blank" rel="noopener">The Pant Project</a></div>
-      <div class="bcat"><i>Home Care<b>01</b></i><a class="brand" href="https://www.instagram.com/reel/DeJPUUDOaEn/" target="_blank" rel="noopener">Ariel</a></div>
+      <div class="bcat"><i>Grooming &amp; Personal Care<b>11</b></i><a class="brand" href="https://www.instagram.com/reel/DdRmFPmOXA5/" target="_blank" rel="noopener">Beardo</a><a class="brand" href="https://www.instagram.com/reel/DdMh_kJTSe8/" target="_blank" rel="noopener">Wishcare</a><a class="brand" href="https://www.instagram.com/reel/Daufl9AuDQH/" target="_blank" rel="noopener">Mancode</a><a class="brand" href="https://www.instagram.com/reel/DdbfXTYuaYu/" target="_blank" rel="noopener">Mannlich</a><a class="brand" href="https://www.instagram.com/reel/DeMQCyCu2AF/" target="_blank" rel="noopener">Denver</a><a class="brand" href="https://www.instagram.com/reel/DeepNfEOxb3/" target="_blank" rel="noopener">The Body Language</a><a class="brand" href="https://www.instagram.com/reel/DeotVRTOIXF/" target="_blank" rel="noopener">Dermacy</a><a class="brand" href="https://www.instagram.com/reel/DetaiIkusK7/" target="_blank" rel="noopener">Vedaplus</a><a class="brand" href="https://www.instagram.com/reel/DfCqmoIO0DM/" target="_blank" rel="noopener">Mantittude</a><a class="brand" href="https://www.instagram.com/reel/DfJkLgYOb-X/" target="_blank" rel="noopener">Savlon</a><span class="bmulti"><a class="brand" href="https://www.instagram.com/reel/Dftw6VzOg31/" target="_blank" rel="noopener">Jovees Herbal</a><a class="bx" href="https://www.instagram.com/reel/Dftw6VzOg31/" target="_blank" rel="noopener">01</a><a class="bx" href="https://www.instagram.com/reel/DgAbCscTM12/" target="_blank" rel="noopener">02</a></span></div>
+      <div class="bcat"><i>Aviation &amp; Tech<b>04</b></i><a class="brand" href="https://www.instagram.com/reel/Dctm2bUunMK/" target="_blank" rel="noopener">Air India</a><a class="brand" href="https://www.instagram.com/reel/Da0Ca7Ot5FJ/" target="_blank" rel="noopener">OnePlus</a><a class="brand" href="https://www.instagram.com/reel/DeZSUt0Olrk/" target="_blank" rel="noopener">Truke</a><a class="brand" href="https://www.instagram.com/reel/DfWswJIuSFo/" target="_blank" rel="noopener">Infinix GT 50 Pro</a></div>
+      <div class="bcat"><i>Food &amp; Beverage<b>04</b></i><a class="brand" href="https://www.instagram.com/reel/DddiStfO8JB/" target="_blank" rel="noopener">Lays</a><a class="brand" href="https://www.instagram.com/reel/Dd6M-fDuuCO/" target="_blank" rel="noopener">Benne Talk</a><a class="brand" href="https://www.instagram.com/reel/DebyPpRufHv/" target="_blank" rel="noopener">We Make Sweets &amp; Snacks</a><a class="brand" href="https://www.instagram.com/reel/DfPcLyrT5Kn/" target="_blank" rel="noopener">Choco Blast</a></div>
+      <div class="bcat"><i>Fitness<b>02</b></i><a class="brand" href="https://www.instagram.com/reel/DdCWws1uLEV/" target="_blank" rel="noopener">Big Muscles</a><a class="brand" href="https://www.instagram.com/reel/DfU5GnFOSWl/" target="_blank" rel="noopener">Fuyl</a></div>
+      <div class="bcat"><i>Fashion<b>02</b></i><a class="brand" href="https://www.instagram.com/reel/DdTftqtOS7T/" target="_blank" rel="noopener">The Pant Project</a><a class="brand" href="https://www.instagram.com/reel/Df9bL5tujhO/" target="_blank" rel="noopener">Ikawa</a></div>
+      <div class="bcat"><i>Home Care<b>02</b></i><a class="brand" href="https://www.instagram.com/reel/DeJPUUDOaEn/" target="_blank" rel="noopener">Ariel</a><a class="brand" href="https://www.instagram.com/reel/DfeVSuUuPhg/" target="_blank" rel="noopener">Deodap</a></div>
       <div class="bcat"><i>Others<b>02</b></i><a class="brand" href="https://www.instagram.com/reel/DdjoTlzOANC/" target="_blank" rel="noopener">Bappa.Org</a><a class="brand" href="https://www.instagram.com/reel/DfESrBpukyh/" target="_blank" rel="noopener">Jio</a></div>
       <div class="bcat evcat"><i>Events<b>01</b></i><span class="brand">P&amp;G Loop</span><div class="evl"><a class="evr" href="https://www.instagram.com/reel/DfALNQpuKE8/" target="_blank" rel="noopener"><em>01</em>Event<span>↗</span></a><a class="evr" href="https://www.instagram.com/reel/DfHDf9RuPGa/" target="_blank" rel="noopener"><em>02</em>Gillette<span>↗</span></a><a class="evr" href="https://www.instagram.com/reel/DfHwRbkumfZ/" target="_blank" rel="noopener"><em>03</em>Vicks<span>↗</span></a><a class="evr" href="https://www.instagram.com/reel/DfHyu_UOt9s/" target="_blank" rel="noopener"><em>04</em>Old Spice<span>↗</span></a><a class="evr" href="https://www.instagram.com/reel/DfIPDVAuk4Z/" target="_blank" rel="noopener"><em>05</em>Hamper<span>↗</span></a></div></div>
     </div>
-    <div class="brand-count rv"><span>Twenty-six brands to date · click a name to watch its reel</span><s></s></div>
+    <div class="brand-count rv"><span>Thirty-two brands to date · click a name to watch its reel</span><s></s></div>
   </div>
 </section>
 
